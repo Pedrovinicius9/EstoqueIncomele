@@ -1,0 +1,30 @@
+.button-select{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+a:not(.botao){
+    height: 6.4rem;   
+    cursor: pointer;
+}
+
+a.bt1{
+    background-color: rgb(230, 224, 245);
+    color: #4933c2;
+    font-size: 32px;
+    border-radius: 2rem 0 0 2rem;
+    border: 3px solid #4933c2;
+}
+
+a.bt2 {
+    background-color: rgb(230, 224, 245);
+    color: #4933c2; 
+    font-size: 32px;
+    border-radius: 0 2rem 2rem 0;
+    border: 3px solid #4933c2;
+}
+a.hover{
+    color: white;
+    border: 3px solid black;
+}
+

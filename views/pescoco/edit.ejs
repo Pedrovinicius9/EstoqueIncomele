@@ -1,0 +1,43 @@
+<%- include ('../partials/header.ejs') %>
+
+<body>
+    <%- include ('../partials/header.ejs') %>
+
+    <body>
+        <div class="container">
+            <hr>
+            <div class="col-lg-12" style="text-align: right;">
+                <a href="/" class="btn btn-dark text-right">HOME</a>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-header">
+                    <h1>Editar registro</h1>
+                </div>
+                <div class="card-body">
+                    <form action="/pescoco/update" method="POST">
+                        <select type="text" name="estado" class="form-control">
+                            <option value="<%= pescoco.estado %>"><%= pescoco.estado %></option>
+                            <% if(pescoco.estado == 'ENTRADA') { %>
+                            <option value="SAIDA">SAIDA</option>
+                            <% } else { %>
+                            <option value="ENTRADA">ENTRADA</option>
+                            <% }  %>
+                        </select> <br>
+                        </select>
+                        <input type="number" class="form-control" name="qntd"
+                            placeholder="Informe a quantidade de peças:" value="<%= pescoco.qntd %>"><br>
+                        <input type="text" class="form-control" name="date" placeholder="Informe a data:"
+                            value="<%= pescoco.date %>"><br>
+                        <input type="hidden" name="id" value="<%= pescoco.id %>">
+                        <button class="btn btn-primary btn-lg ">Atualizar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <%- include ('../partials/footer.ejs') %>
+</body>
+
+<%- include ('../partials/footer.ejs') %>
